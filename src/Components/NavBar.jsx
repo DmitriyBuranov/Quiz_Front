@@ -4,7 +4,7 @@ import {
     Link
   } from "react-router-dom";
 
-import {Button, Alert, Card, Navbar, Form, NavDropdown, Nav, Container, Row, Col} from 'react-bootstrap'
+import { Navbar,  NavDropdown, Nav, Container} from 'react-bootstrap'
 
 const NavBar = () => {
     return(

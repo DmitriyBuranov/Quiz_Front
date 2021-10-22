@@ -1,9 +1,21 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-
-import {Button, Alert, Card, Navbar, Form, NavDropdown, Nav, Container, Row, Col} from 'react-bootstrap'
+import React, { useState } from 'react'
+import {Button, Form, Container, Row, Col} from 'react-bootstrap'
+import CategoriesOptions from './CategoriesOptions'
 
 
 const StartNewRound = () => {
+
+    const [categories, setCategories] = useState([]);
+
+    fetch('api/v1/Categories')
+        .then(response => response.json())
+        .then((data) => {
+            console.log(data);
+            setCategories(data);
+        })
+        .catch(error => console.error('Unable to get categories.', error)); 
+
     return(
     <div className="mt-3"> 
       <Container>
@@ -20,8 +32,9 @@ const StartNewRound = () => {
                 <Form.Group as={Col} controlId="formGridState">
                     <Form.Label> Choose category</Form.Label>
                     <Form.Select defaultValue="Choose..." className="mb-3">
-                        <option>Choose...</option>
-                        <option>...</option>
+                    {categories.map((categori, i) => (
+                        <option key={i}>{categori.name}</option>
+                    ))}
                     </Form.Select>
                 </Form.Group>
             </Col>  

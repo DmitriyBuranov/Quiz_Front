@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import {Button, Alert, Card, Navbar, Form, NavDropdown, Nav, Container, Row, Col} from 'react-bootstrap'
+import {Button, Card, Form, Container, Row, Col} from 'react-bootstrap'
 
 
 const QuestionContainer = () => {
@@ -29,19 +29,19 @@ const QuestionContainer = () => {
               </Button>
             </Row>
             <Row>
-              <Button className="mb-3" variant="primary" size="lg">
+              <Button className="mb-3 " variant="primary" size="lg">
                 2 answer
               </Button>
             </Row>
           </Col> 
           <Col>
             <Row>
-              <Button className="mb-3" variant="primary" size="lg">
+              <Button className="mb-3 " variant="primary" size="lg">
                 3 answer
               </Button>
             </Row>
             <Row>
-              <Button className="mb-3" variant="primary" size="lg">
+              <Button className="mb-3 " variant="primary" size="lg">
                 4 answer
               </Button>
             </Row>

@@ -6,19 +6,15 @@ import QuestionContainer from "./Components/QuestionContainer"
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
-
-//API where we going to get questions and save
-const QuizAPI_URL = 'https://localhost:6001/api/v1'
 
 
 function App() {
   return (
     <div className="App">
-        <Router>
+      <Router>
         <NavBar />
         <Switch>
           <Route path="/StartNewRound" component={StartNewRound}>
@@ -28,7 +24,7 @@ function App() {
             <QuestionContainer />
           </Route>
         </Switch>
-    </Router>
+      </Router>
     </div>
   );
 }
